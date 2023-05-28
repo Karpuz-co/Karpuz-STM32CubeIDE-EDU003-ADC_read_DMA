@@ -64,8 +64,8 @@ all: main-build
 main-build: EDU003-ADC_read_DMA.elf secondary-outputs
 
 # Tool invocations
-EDU003-ADC_read_DMA.elf EDU003-ADC_read_DMA.map: $(OBJS) $(USER_OBJS) /Users/fuad/STM32CubeIDE/workspace_1.9.0/read_adc_with_dma/STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "EDU003-ADC_read_DMA.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/fuad/STM32CubeIDE/workspace_1.9.0/read_adc_with_dma/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EDU003-ADC_read_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+EDU003-ADC_read_DMA.elf EDU003-ADC_read_DMA.map: $(OBJS) $(USER_OBJS) /Users/fuad/STM32CubeIDE/workspace_1.9.0/Karpuz-STM32CubeIDE-EDU003-ADC_read_DMA/EDU003-ADC_read_DMA/STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "EDU003-ADC_read_DMA.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/fuad/STM32CubeIDE/workspace_1.9.0/Karpuz-STM32CubeIDE-EDU003-ADC_read_DMA/EDU003-ADC_read_DMA/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EDU003-ADC_read_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
